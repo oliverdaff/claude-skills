@@ -1,37 +1,15 @@
 ---
 name: expert-review
-description: Use when the user asks for an expert review, multi-perspective review, or wants code/architecture/decisions critiqued from diverse viewpoints. Also use when "/expert-review" is invoked, or "/expert-review add" to manage the expert roster.
+description: Simulates a panel of real, named experts (from a customisable roster) reviewing code, architecture, product decisions, or business strategy. Each expert stays in character with their known philosophy. Use when the user asks for "expert review", "multi-perspective review", wants work critiqued from diverse viewpoints, or invokes "/expert-review". Also handles "/expert-review add" for roster management. Do NOT use for standard code review (use code-reviewer), pre-merge verification (use requesting-code-review), or responding to review feedback (use receiving-code-review).
 ---
 
 # Expert Review
 
 Review work from a dynamically-selected panel of real, named experts. Each expert stays true to their known philosophy — direct, not diplomatic.
 
+This skill provides strategic, perspective-diverse critique. It pairs well after mechanical code review (code-reviewer) for a second pass focused on design philosophy and trade-offs.
+
 ## Process
-
-```dot
-digraph expert_review {
-    "User requests review" [shape=doublecircle];
-    "What is being reviewed?" [shape=diamond];
-    "Identify relevant domains" [shape=box];
-    "Select 6-8 experts from roster" [shape=box];
-    "Domain gaps in roster?" [shape=diamond];
-    "Generate ad-hoc experts" [shape=box];
-    "Run each expert's take" [shape=box];
-    "Write synthesis/verdict" [shape=box];
-    "Review complete" [shape=doublecircle];
-
-    "User requests review" -> "What is being reviewed?";
-    "What is being reviewed?" -> "Identify relevant domains";
-    "Identify relevant domains" -> "Select 6-8 experts from roster";
-    "Select 6-8 experts from roster" -> "Domain gaps in roster?";
-    "Domain gaps in roster?" -> "Generate ad-hoc experts" [label="yes"];
-    "Domain gaps in roster?" -> "Run each expert's take" [label="no"];
-    "Generate ad-hoc experts" -> "Run each expert's take";
-    "Run each expert's take" -> "Write synthesis/verdict";
-    "Write synthesis/verdict" -> "Review complete";
-}
-```
 
 ### Step 1: Identify domains
 
@@ -65,7 +43,7 @@ When the roster lacks coverage for a relevant domain, generate ad-hoc expert per
 - Format identically to roster entries
 
 After the review, suggest the user add useful ad-hoc experts to their roster:
-> "Consider adding [Name] to your expert roster — edit `~/.claude/skills/expert-review/roster.md` or ask me to add them"
+> "Consider adding [Name] to your expert roster — run `/expert-review add` or edit roster.md directly"
 
 **Never invent generic categories** ("Security Expert", "Performance Reviewer", "Senior Engineer"). Every expert must be a real, identifiable person with known public work. If you can't name a real person for a domain, skip that domain — a gap is better than a fabricated voice.
 
@@ -110,26 +88,7 @@ The synthesis must surface disagreements, not paper over them. If matklad says "
 
 Users can customise their expert panel:
 
-- **Add experts**: `/expert-review add` — guided flow (see below)
+- **Add experts**: `/expert-review add` — see [add-flow.md](add-flow.md) for the guided flow
 - **Edit directly**: Edit [roster.md](roster.md) by hand
 - **Remove an expert**: Delete their entry from roster.md
 - **Project-specific experts**: Add an `## Expert Review Panel` section to the project's CLAUDE.md — these supplement (not replace) the global roster
-
-### `/expert-review add` flow
-
-When the user invokes `/expert-review add` (with or without a name), walk them through building their panel:
-
-1. **Show current roster** — list current experts by category with a one-line summary each
-2. **Identify gaps** — based on the user's typical work (check project CLAUDE.md, recent conversation context), suggest 2-3 domains that are underrepresented. Examples: "You have no security expert", "No one covers database design", "Your frontend coverage is thin"
-3. **Ask what they want to add** — let the user name someone, describe a domain they want covered, or pick from your suggestions
-4. **For each expert to add:**
-   - If you recognise the person: pre-fill their focus, flags, and "Ask:" question. Show the draft and ask the user to confirm or tweak
-   - If you don't recognise them: ask the user three questions:
-     - What's their focus/domain?
-     - What do they typically flag or criticise?
-     - What's the core question they'd ask about any piece of work?
-   - Ask which roster category to place them in (suggest one, let user override)
-5. **Write to roster.md** — append the new entry in the existing format, under the chosen category
-6. **Confirm** — show what was added and the updated category listing
-
-The user can add multiple experts in one session — loop back to step 3 until they're done.
