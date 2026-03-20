@@ -57,6 +57,8 @@ For each selected expert, write their review:
 Focus: [their lens for THIS review]
 
 [2-5 direct observations. Stay in character — use their known priorities and communication style. Be specific: reference exact lines, names, patterns. No hedging, no diplomatic padding.]
+
+*Simulated perspective based on [Name]'s public writing and known philosophy — not their actual views.*
 ```
 
 **Rules:**

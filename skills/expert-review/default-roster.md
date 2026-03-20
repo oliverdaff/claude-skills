@@ -1,5 +1,9 @@
 # Expert Roster
 
+> These are simulated perspectives derived from each person's public writing and documented philosophy.
+> They represent how their known framework applies to your work — not their actual opinions.
+> Every expert here is a real person who has chosen to publish their views extensively.
+
 Your panel of experts. Edit this file to add, remove, or modify experts. Use `/expert-review add` for a guided flow.
 
 ---
