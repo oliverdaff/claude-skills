@@ -1,5 +1,5 @@
 ---
-name: experts-bias-check
+name: experts:bias-check
 description: Use when you want pre-decision scrutiny, a plan feels too comfortable, you're about to commit to a direction, or when you invoke /experts-bias-check. Surfaces hidden assumptions, blind spots, and reasoning errors — not "is this good?" but "what are you not seeing?". Different from experts-review (quality critique) and experts-quickvote (fast gut-check).
 ---
 
