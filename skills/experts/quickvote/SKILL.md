@@ -1,5 +1,5 @@
 ---
-name: experts-quickvote
+name: experts:quickvote
 description: Use when you want a fast gut-check from multiple perspectives without a full review — sanity checks, quick decisions, "does this feel right?" moments, or when you invoke /experts-quickvote. For deep critique with synthesis and action items, use experts-review instead.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: experts-review
+name: experts:review
 description: Use when the user asks for expert review, multi-perspective critique, or wants work reviewed from diverse viewpoints — or invokes /experts-review. Covers code, architecture, product decisions, and business strategy. Use --devil for adversarial pressure-testing, --verbose for flat output (agent consumption). Also handles /experts-review add for roster management. Do NOT use for standard code review (use code-reviewer), pre-merge verification (use requesting-code-review), or responding to review feedback (use receiving-code-review).
 ---
 
