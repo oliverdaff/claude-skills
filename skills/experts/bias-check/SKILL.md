@@ -1,13 +1,13 @@
 ---
-name: experts:bias-check
-description: Use when you want pre-decision scrutiny, a plan feels too comfortable, you're about to commit to a direction, or when you invoke /experts:bias-check. Surfaces hidden assumptions, blind spots, and reasoning errors — not "is this good?" but "what are you not seeing?". Different from experts:review (quality critique) and experts:quickvote (fast gut-check).
+name: experts-bias-check
+description: Use when you want pre-decision scrutiny, a plan feels too comfortable, you're about to commit to a direction, or when you invoke /experts-bias-check. Surfaces hidden assumptions, blind spots, and reasoning errors — not "is this good?" but "what are you not seeing?". Different from experts-review (quality critique) and experts-quickvote (fast gut-check).
 ---
 
 # Expert Bias Check
 
 A cognitive bias audit. Experts scan the work for flawed reasoning, hidden assumptions, and blind spots — not to judge quality but to surface what you might not be seeing.
 
-Use this *before* committing to a direction. Run `experts:review` after to evaluate whether the direction is well-executed.
+Use this *before* committing to a direction. Run `experts-review` after to evaluate whether the direction is well-executed.
 
 ## Built-in panel
 

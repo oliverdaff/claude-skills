@@ -1,6 +1,6 @@
-# `/experts:review add` flow
+# `/experts-review add` flow
 
-When the user invokes `/experts:review add` (with or without a name), walk them through building their panel:
+When the user invokes `/experts-review add` (with or without a name), walk them through building their panel:
 
 1. **Show current roster** — list current experts by category with a one-line summary each
 2. **Identify gaps** — based on the user's typical work (check project CLAUDE.md, recent conversation context), suggest 2-3 domains that are underrepresented. Examples: "You have no security expert", "No one covers database design", "Your frontend coverage is thin"

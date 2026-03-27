@@ -1,6 +1,6 @@
 ---
-name: experts:review
-description: Use when the user asks for expert review, multi-perspective critique, or wants work reviewed from diverse viewpoints — or invokes /experts:review. Covers code, architecture, product decisions, and business strategy. Use --devil for adversarial pressure-testing, --verbose for flat output (agent consumption). Also handles /experts:review add for roster management. Do NOT use for standard code review (use code-reviewer), pre-merge verification (use requesting-code-review), or responding to review feedback (use receiving-code-review).
+name: experts-review
+description: Use when the user asks for expert review, multi-perspective critique, or wants work reviewed from diverse viewpoints — or invokes /experts-review. Covers code, architecture, product decisions, and business strategy. Use --devil for adversarial pressure-testing, --verbose for flat output (agent consumption). Also handles /experts-review add for roster management. Do NOT use for standard code review (use code-reviewer), pre-merge verification (use requesting-code-review), or responding to review feedback (use receiving-code-review).
 ---
 
 # Expert Review
@@ -13,9 +13,9 @@ This skill provides strategic, perspective-diverse critique. It pairs well after
 
 **Default** — balanced critique. Compact output: expert one-liners visible, full takes collapsed, verdict at the bottom.
 
-**Devil's advocate** (`/experts:review --devil`) — each expert makes the strongest possible case *against* the work. Not balanced critique; adversarial pressure-testing. Use when you've already decided something and want to stress-test it before committing.
+**Devil's advocate** (`/experts-review --devil`) — each expert makes the strongest possible case *against* the work. Not balanced critique; adversarial pressure-testing. Use when you've already decided something and want to stress-test it before committing.
 
-**Verbose** (`/experts:review --verbose`) — full flat output with no collapsed sections. Use for agent consumption or when you want everything visible without expanding.
+**Verbose** (`/experts-review --verbose`) — full flat output with no collapsed sections. Use for agent consumption or when you want everything visible without expanding.
 
 ## Process
 
@@ -51,7 +51,7 @@ When the roster lacks coverage for a relevant domain, generate ad-hoc expert per
 - Format identically to roster entries
 
 After the review, suggest the user add useful ad-hoc experts to their roster:
-> "Consider adding [Name] to your expert roster — run `/experts:review add` or edit roster.md directly"
+> "Consider adding [Name] to your expert roster — run `/experts-review add` or edit roster.md directly"
 
 **Never invent generic categories** ("Security Expert", "Performance Reviewer", "Senior Engineer"). Every expert must be a real, identifiable person with known public work. If you can't name a real person for a domain, skip that domain — a gap is better than a fabricated voice.
 
@@ -137,7 +137,7 @@ After the verdict, always add:
 
 Users can customise their expert panel:
 
-- **Add experts**: `/experts:review add` — see [add-flow.md](add-flow.md) for the guided flow
+- **Add experts**: `/experts-review add` — see [add-flow.md](add-flow.md) for the guided flow
 - **Edit directly**: Edit [roster.md](roster.md) by hand
 - **Remove an expert**: Delete their entry from roster.md
 - **Project-specific experts**: Add an `## Expert Review Panel` section to the project's CLAUDE.md — these supplement (not replace) the global roster

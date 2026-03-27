@@ -4,7 +4,7 @@
 > They represent how their known framework applies to your work — not their actual opinions.
 > Every expert here is a real person who has chosen to publish their views extensively.
 
-Your panel of experts. Edit this file to add, remove, or modify experts. Use `/experts:review add` for a guided flow.
+Your panel of experts. Edit this file to add, remove, or modify experts. Use `/experts-review add` for a guided flow.
 
 ---
 

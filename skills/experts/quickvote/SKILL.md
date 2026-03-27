@@ -1,6 +1,6 @@
 ---
-name: experts:quickvote
-description: Use when you want a fast gut-check from multiple perspectives without a full review — sanity checks, quick decisions, "does this feel right?" moments, or when you invoke /experts:quickvote. For deep critique with synthesis and action items, use experts:review instead.
+name: experts-quickvote
+description: Use when you want a fast gut-check from multiple perspectives without a full review — sanity checks, quick decisions, "does this feel right?" moments, or when you invoke /experts-quickvote. For deep critique with synthesis and action items, use experts-review instead.
 ---
 
 # Expert Quickvote
@@ -43,6 +43,6 @@ If one expert voted ✗:
 > "**[Name]** objected — want me to expand their take into a full review?"
 
 If multiple experts voted ✗:
-> "Multiple objections — want me to run `/experts:review` on this?"
+> "Multiple objections — want me to run `/experts-review` on this?"
 
 No escalation prompt if all votes are ✓ or ⚠.

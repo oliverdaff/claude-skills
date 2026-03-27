@@ -6,9 +6,9 @@ Personal collection of [Claude Code](https://docs.anthropic.com/en/docs/claude-c
 
 | Skill | Description |
 |-------|-------------|
-| [experts:review](skills/experts/review/) | Review code, architecture, product specs, or business decisions from a dynamically-selected panel of real, named experts. Supports `--devil` for adversarial pressure-testing and `--verbose` for flat output (agent consumption). |
-| [experts:quickvote](skills/experts/quickvote/) | Fast gut-check — 3–5 relevant experts each cast a vote and one sentence. |
-| [experts:bias-check](skills/experts/bias-check/) | Cognitive bias audit — surfaces hidden assumptions and blind spots before you commit to a direction. |
+| [experts-review](skills/experts/review/) | Review code, architecture, product specs, or business decisions from a dynamically-selected panel of real, named experts. Supports `--devil` for adversarial pressure-testing and `--verbose` for flat output (agent consumption). |
+| [experts-quickvote](skills/experts/quickvote/) | Fast gut-check — 3–5 relevant experts each cast a vote and one sentence. |
+| [experts-bias-check](skills/experts/bias-check/) | Cognitive bias audit — surfaces hidden assumptions and blind spots before you commit to a direction. |
 
 ## Installation
 
@@ -34,7 +34,7 @@ cp -r skills/experts ~/.claude/skills/
 Deep multi-perspective critique with synthesis and action items:
 
 ```
-/experts:review
+/experts-review
 ```
 
 Or ask naturally: "review this from expert perspectives"
@@ -44,7 +44,7 @@ The skill dynamically selects 4-8 real, named experts based on what you're revie
 **Customise your panel:**
 
 ```
-/experts:review add
+/experts-review add
 ```
 
 This walks you through adding experts to your personal roster. Your roster (`roster.md`) is gitignored — it won't be overwritten by updates.
@@ -56,17 +56,17 @@ On first use, `default-roster.md` is copied to `roster.md` as your starting pane
 Fast gut-check — each expert votes and gives one sentence:
 
 ```
-/experts:quickvote
+/experts-quickvote
 ```
 
-Use this for quick sanity checks. Run `/experts:review` when you need depth.
+Use this for quick sanity checks. Run `/experts-review` when you need depth.
 
 ### Expert Bias Check
 
 Cognitive bias audit before committing to a direction:
 
 ```
-/experts:bias-check
+/experts-bias-check
 ```
 
 Scans for hidden assumptions, reasoning errors, and blind spots using a fixed panel of decision science experts (Kahneman, Annie Duke, Taleb, Parrish, Tetlock, Thaler). Use this *before* a review, not after.
@@ -76,7 +76,7 @@ Scans for hidden assumptions, reasoning errors, and blind spots using a fixed pa
 Adversarial pressure-testing of a decision or piece of work:
 
 ```
-/experts:review --devil
+/experts-review --devil
 ```
 
 Every expert argues *against* the work as forcefully as their philosophy allows. Use when you've already decided something and want to stress-test it before committing.
@@ -86,7 +86,7 @@ Every expert argues *against* the work as forcefully as their philosophy allows.
 Full flat output for agent consumption or when you want everything visible without expanding:
 
 ```
-/experts:review --verbose
+/experts-review --verbose
 ```
 
 ## The real-people question
