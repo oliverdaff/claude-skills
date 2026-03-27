@@ -15,10 +15,9 @@ Personal collection of [Claude Code](https://docs.anthropic.com/en/docs/claude-c
 ### Symlink (recommended — gets updates on `git pull`)
 
 ```bash
-mkdir -p ~/.claude/skills/experts
-ln -s /path/to/claude-skills/skills/experts/review ~/.claude/skills/experts/review
-ln -s /path/to/claude-skills/skills/experts/quickvote ~/.claude/skills/experts/quickvote
-ln -s /path/to/claude-skills/skills/experts/bias-check ~/.claude/skills/experts/bias-check
+ln -s /path/to/claude-skills/skills/experts/review ~/.claude/skills/experts-review
+ln -s /path/to/claude-skills/skills/experts/quickvote ~/.claude/skills/experts-quickvote
+ln -s /path/to/claude-skills/skills/experts/bias-check ~/.claude/skills/experts-bias-check
 ```
 
 ### Copy
